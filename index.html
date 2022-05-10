@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập máy tính</title>
+</head>
+<body>
+    <h2>CASIO Fx-500VN Plus</h2>
+    <br>
+    <table>
+        <tr>
+            <td colspan="4"><input id="result" type="text"></td>
+        </tr>
+        <tr>
+            <td class="td1"><button class="so1" onclick="input('1')">1</button></td>
+            <td><button onclick="input('2')">2</button></td>
+            <td><button onclick="input('3')">3</button></td>
+            <td><button onclick="input('+')">+</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="input('4')">4</button></td>
+            <td><button onclick="input('5')">5</button></td>
+            <td><button onclick="input('6')">6</button></td>
+            <td><button onclick="input('-')">-</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="input('7')">7</button></td>
+            <td><button onclick="input('8')">8</button></td>
+            <td><button onclick="input('9')">9</button></td>
+            <td><button onclick="input('*')">X</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="resetInput()">C</button></td>
+            <td><button onclick="input('0')">0</button></td>
+            <td><button onclick="tinhtoan()">=</button></td>
+            <td><button onclick="input('/')">/</button></td>
+        </tr>
+    </table>
+    <script>
+        function input(input){
+            let hienthi = document.getElementById('result').value += input;
+        }
+        function resetInput(){
+            let xoahienthi = document.getElementById('result').value = "";
+        }
+        function tinhtoan(){
+            let tinhtoan = document.getElementById('result').value;
+            document.getElementById('result').value=eval(tinhtoan);
+        }
+    </script>
+</body>
+</html>
+<link rel="stylesheet" href="main.css">
